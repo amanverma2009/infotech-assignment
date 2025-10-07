@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Infotech Assignment</title>
+  </head>
+  <body>
+    <nav>
+      <img src="./assets/logo.svg" alt="Company Logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+      <button>Get A Quote</button>
+      <img
+        src="./assets/hamburger.svg"
+        alt="Hamburger Menu"
+        class="hamburger"
+      />
+    </nav>
+    <div class="mobile-nav">
+      <div class="mobile-nav-top">
+        <img src="./assets/logo.svg" alt="Company Logo" class="logo" />
+        <img src="./assets/close.svg" alt="Close Menu" class="close" />
+      </div>
+      <div class="mobile-nav-bottom">
+        <ul>
+          <li>
+            <img src="./assets/home.svg" alt="" /><a
+              href="#"
+              class="primary-color"
+              >Home</a
+            >
+          </li>
+          <li>
+            <img src="./assets/about-us.svg" alt="" /><a href="#" style="color: black;">About Us</a>
+          </li>
+          <li>
+            <img src="./assets/our-services.svg" alt="" /><a href="#" style="color: black;">Our Services</a>
+          </li>
+          <li>
+            <img src="./assets/pricing.svg" alt="" /><a href="#" style="color: black;">Pricing</a>
+          </li>
+          <li><img src="./assets/faq.svg" alt="" /><a href="#" style="color: black;">FAQ</a></li>
+        </ul>
+        <button class="mobile-nav-contact-btn">CONTACT US</button>
+      </div>
+    </div>
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <h2 class="hero-heading">
+            Your Resume
+            <span class="primary-color">Deserves A Yes</span>
+            Let's Make It Happen
+            <img
+              src="./assets/underlines.svg"
+              alt="Highlight Underlines"
+              class="hero-underlines"
+            />
+          </h2>
+          <p>
+            If Your Resume Isn't Getting Responses, It's Time For An Upgrade.
+            Get An ATS-Optimized Resume Crafted By HR Experts To Help You Land
+            More Interviews. Our Resumes Are Designed To Get Your Foot In The
+            Door And Place Your Name At The Top Of The Shortlist.
+          </p>
+          <div class="hero-btns">
+            <button class="resume-packages-btn">RESUME PAKAGES</button>
+            <button class="contact-btn">CONTACT US</button>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div>
+            <img
+              src="./assets/hero-image.png"
+              alt="Hero Image"
+              class="hero-image"
+            />
+            <img
+              src="./assets/rating.png"
+              class="rating-card"
+              alt="Instructor Rating Card"
+            />
+            <img
+              src="./assets/resume-no.png"
+              class="resume-no-card"
+              alt="Online Resume Created Card"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="services">
+        <div class="services-main">
+          <div class="services-main-top">
+            <div class="services-main-title">What You Get</div>
+            <div class="services-main-description">
+              You're Not Just
+              <span class="primary-color">Another Applicant</span> And Your
+              Resume Shouldn't Look Like One
+            </div>
+          </div>
+          <div class="services-main-bottom">
+            <div class="service-card">
+              <div class="service-card-top">
+                <img src="./assets/1.png" alt="" height="149.02" width="200" />
+                <h3>
+                  A Resume Format That Gets You Interviews
+                </h3>
+              </div>
+              <p>
+                Get a professionally written, keyword-optimized resume that
+                lands in recruiter inboxes.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-card-top">
+                <img src="./assets/2.png" alt="" height="149.02" width="200" />
+                <h3>
+                  A Cover Letter Style That Stands Out Strong
+                </h3>
+              </div>
+              <p>
+                Stand out with a cover letter that speaks directly to the role
+                and reflects your strengths.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-card-top">
+                <img src="./assets/3.png" alt="" height="149.02" width="200" />
+                <h3>
+                  A LinkedIn Profile That Works For You
+                </h3>
+              </div>
+              <p>
+                Attract the right eyes, start conversations, and show up in
+                recruiter searches.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-card-top">
+                <img src="./assets/4.png" alt="" height="149.02" width="200" />
+                <h3>
+                  An Interview Strategy That Builds Confidence
+                </h3>
+              </div>
+              <p>
+                Interview preperation with real HR professionals so you speak
+                clearly confidently.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const hamburger = document.getElementsByClassName("hamburger")[0];
+      const navLinks = document.getElementsByClassName("nav-links")[0];
+      const closeBtn = document.getElementsByClassName("close")[0];
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        document.body.getElementsByClassName("mobile-nav")[0].style.right = "0";
+        document.body.getElementsByTagName("nav")[0].style.display = "none";
+      });
+      closeBtn.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        document.body.getElementsByClassName("mobile-nav")[0].style.right =
+          "-100%";
+        document.body.getElementsByTagName("nav")[0].style.display = "flex";
+      });
+    </script>
+  </body>
+</html>
